@@ -12,6 +12,72 @@
   },
   "files": [
     {
+      "kind": "group",
+      "path": "Domain",
+      "children": [
+        {
+          "kind": "group",
+          "path": "Scenes",
+          "children": [
+            {
+              "kind": "group",
+              "path": "CoinsList",
+              "children": [
+                { "path": "CoinsListInteractor.swift", "target-membership": [ "MarketCoins/compile-sources" ] },
+                { "path": "CoinsListModels.swift", "target-membership": [ "MarketCoins/compile-sources" ] },
+                { "path": "CoinsListPresenter.swift", "target-membership": [ "MarketCoins/compile-sources" ] },
+                { "path": "CoinsListRouter.swift", "target-membership": [ "MarketCoins/compile-sources" ] },
+                { "path": "CoinsListViewController.swift", "target-membership": [ "MarketCoins/compile-sources" ] },
+                { "path": "CoinsListWorker.swift", "target-membership": [ "MarketCoins/compile-sources" ] },
+              ],
+            },
+          ],
+        }, {
+          "kind": "group",
+          "path": "DataProvider",
+          "children": [
+            {
+              "kind": "group",
+              "path": "GlobalDataProvider",
+              "children": [
+                { "path": "GlobalValuesDataProvider.swift", "target-membership": [ "MarketCoins/compile-sources" ] },
+              ],
+            },
+            { "kind": "folder", "path": "CoinsDataProvider", "target-membership": [ "MarketCoins" ] },
+            {
+              "kind": "group",
+              "path": "NetworkRepository",
+              "children": [
+                {
+                  "kind": "group",
+                  "path": "Store",
+                  "children": [
+                    { "path": "GerericStore.swift", "target-membership": [ "MarketCoins/compile-sources" ] },
+                    { "path": "CoinStore.swift", "target-membership": [ "MarketCoins/compile-sources" ] },
+                    { "path": "GlobalStore.swift", "target-membership": [ "MarketCoins/compile-sources" ] },
+                  ],
+                }, {
+                  "kind": "group",
+                  "path": "Router",
+                  "children": [
+                    { "path": "CoinsRouter.swift", "target-membership": [ "MarketCoins/compile-sources" ] },
+                    { "path": "GlobalRouter.swift", "target-membership": [ "MarketCoins/compile-sources" ] },
+                  ],
+                }, {
+                  "kind": "group",
+                  "path": "API",
+                  "children": [
+                    { "path": "API.swift", "target-membership": [ "MarketCoins/compile-sources" ] },
+                  ],
+                },
+              ],
+            },
+            { "path": "GenericDataProvider.swift", "target-membership": [ "MarketCoins/compile-sources" ] },
+          ],
+        },
+        { "kind": "folder", "path": "Model", "target-membership": [ "MarketCoins" ] },
+      ],
+    }, {
       "kind": "folder",
       "path": "MarketCoins",
       "target-membership": [
@@ -52,11 +118,13 @@
         "DEVELOPMENT_TEAM": "S5L9MC46B3",
         "GENERATE_INFOPLIST_FILE": "YES",
         "INFOPLIST_FILE": "MarketCoins/Info.plist",
+        "INFOPLIST_KEY_LSApplicationCategoryType": "public.app-category.finance",
         "INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents": "YES",
         "INFOPLIST_KEY_UILaunchStoryboardName": "LaunchScreen",
         "INFOPLIST_KEY_UIMainStoryboardFile": "Main",
-        "INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad": "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight",
-        "INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone": "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight",
+        "INFOPLIST_KEY_UISupportedInterfaceOrientations": "UIInterfaceOrientationPortrait",
+        "INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad": "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown",
+        "IPHONEOS_DEPLOYMENT_TARGET": "17.6",
         "LD_RUNPATH_SEARCH_PATHS": [
           "$(inherited)",
           "@executable_path/Frameworks",
@@ -65,12 +133,15 @@
         "PRODUCT_BUNDLE_IDENTIFIER": "dio.projeto.vip.MarketCoins",
         "PRODUCT_NAME": "$(TARGET_NAME)",
         "STRING_CATALOG_GENERATE_SYMBOLS": "YES",
+        "SUPPORTED_PLATFORMS": "iphoneos iphonesimulator",
+        "SUPPORTS_MACCATALYST": "NO",
+        "SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD": "NO",
         "SWIFT_APPROACHABLE_CONCURRENCY": "YES",
         "SWIFT_DEFAULT_ACTOR_ISOLATION": "MainActor",
         "SWIFT_EMIT_LOC_STRINGS": "YES",
         "SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY": "YES",
         "SWIFT_VERSION": "5.0",
-        "TARGETED_DEVICE_FAMILY": "1,2",
+        "TARGETED_DEVICE_FAMILY": "1",
       },
     },
   ],
